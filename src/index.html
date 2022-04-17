@@ -7,21 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="styles/main.css">
-  <script src="scripts/main.js"></script>
+  <script src="script/main.js"></script>
   <title>Masjid</title>
 </head>
 
 <body>
   <main>
-    <div class="welcome-note">
-      <h1>Al-Ibrahimi Masjid</h1>
-      <p>this is our test masjid site</p>
-    </div>
+    <header>
+      <div class="welcome-note" data-aos="fade-up">
+        <h1>Al-Ibrahimi Masjid</h1>
+        <p>this is our test masjid site</p>
+      </div>
+      <div class="islamic-date">
+        Date: <span class="">14 Ramadan</span>
+      </div>
+    </header>
   </main>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      easing: 'fade-up',
+      duration: 700,
+    });
   </script>
 </body>
 

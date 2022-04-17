@@ -10,7 +10,7 @@ module.exports = function (grunt) {
           sourcemap: false
         },
         files: {
-          'public/styles/main.css': 'src/styles/main.scss'
+          'src/styles/main.css': 'src/styles/main.scss'
         }
       }
     },
@@ -19,19 +19,20 @@ module.exports = function (grunt) {
         livereload: true,
         spawn: false,
       },
+      files: ['src/**/*'],
       sass: {
         files: ['src/styles/main.scss'],
         tasks: ['sass']
       },
       html: {
-        files: ['public/index.html']
+        files: ['src/index.html']
       },
     },
     connect: {
       server: {
         options: {
           port: 8000,
-          base: 'public/',
+          base: 'src/',
           hostname: 'localhost',
           protocol: 'http',
           livereload: true,
