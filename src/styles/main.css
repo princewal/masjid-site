@@ -74,16 +74,25 @@ main {
 header {
   width: 100%;
   height: 90vh;
+  background: url(../images/Domes-mosque-Malaysia.webp) no-repeat center/cover;
 }
 header .welcome-note {
-  max-width: none;
+  background: rgba(255, 255, 255, 0.75);
+  max-width: 70%;
   width: 100%;
+  height: 65%;
+  margin: 0 auto;
   position: relative;
   font-size: 2rem;
   padding: 10px;
-  box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.5);
   position: relative;
   left: 0;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 header .welcome-note h1 {
   padding: 10px;
@@ -98,7 +107,7 @@ header .welcome-note p {
   header .welcome-note {
     font-size: 2.5rem;
     max-width: 550px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.75);
     padding: 15px;
     position: absolute;
     top: 20%;
@@ -112,30 +121,31 @@ header .welcome-note p {
   }
 }
 header .islamic-date {
-  font-size: 22px;
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  font-size: 14px;
   font-weight: 400;
+  color: #faf3f2;
   height: auto;
   width: auto;
   text-align: left;
   box-shadow: 10px 10px 22px 0 rgba(0, 0, 0, 0.55);
-  padding: 10px 20px;
+  padding: 10px;
   display: flex;
   align-items: center;
   margin: auto;
 }
 @media screen and (min-width: 1024px) {
   header .islamic-date {
-    font-size: 24px;
-    position: absolute;
-    top: 30%;
-    left: 55%;
-    height: 200px;
+    font-size: 16px;
   }
 }
 
 h1, h2 {
   font-family: "Caudex", serif;
   font-weight: 700;
+  color: #247881;
 }
 
 h1 {
@@ -149,6 +159,31 @@ h1 {
 
 p {
   font-weight: 300;
+}
+
+section {
+  padding: 15px;
+  text-align: center;
+}
+section h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  section {
+    padding: 25px;
+  }
+  section h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  section {
+    padding: 50px;
+  }
+  section h2 {
+    font-size: 32px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
