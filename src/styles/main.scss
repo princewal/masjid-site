@@ -92,7 +92,7 @@ header {
   }
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Caudex', serif;
   font-weight: 700;
   color: #247881;
@@ -125,6 +125,64 @@ section {
     padding: 50px;
     h2 {
       font-size: 32px;
+    }
+  }
+}
+
+.prayer-times {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+  .prayer {
+    color: white;
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px 0;
+     > * {
+      flex: 0 1 100%;
+    }
+    h3 {
+      padding: 10px 0;
+      color: #247881;
+      // text-shadow: 0px 0px 6px #247881;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    &.fajr {
+      background: #8b673d;
+    }
+    &.dhuhr {
+      background: #a68a39;
+    }
+    &.asr {
+      background: #536880;
+    }
+    &.maghrib {
+      background: #82352e;
+    }
+    &.isha {
+      background: #251a1d
+    }
+    .time {
+      padding: 0 0 10px 0;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    height: 500px;
+    width: 660px;
+    .prayer {
+      flex: 0 1 20%;
+      flex-flow: wrap;
+      align-content: center;
     }
   }
 }

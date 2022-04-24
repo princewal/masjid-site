@@ -3,22 +3,19 @@ AOS.init({
   duration: 700,
 });
 
+let todaysDate = {
 
+};
 
-async function fetchHijriJSON() {
-  let todayDate = getCurrentDate()
-  const response = await fetch(`http://api.aladhan.com/v1/gToH?date=${getCurrentDate()}`)
-  const hijriDate = await response.json()
-  return await hijriDate.data.hijri
-}
-
-function getCurrentDate() {
+(function() {
   let currentDate = new Date()
   let cDay = currentDate.getDate()
   let cMonth = currentDate.getMonth() + 1
   let cYear = currentDate.getFullYear()
-  return cDay + "-" + cMonth + "-" + cYear
-}
+  todaysDate.cDay = cDay
+  todaysDate.cMonth = cMonth
+  todaysDate.cYear = cYear
+})()
 
 const request = (url, params = {}, method = 'GET') => {
   let options = {
@@ -33,16 +30,39 @@ const request = (url, params = {}, method = 'GET') => {
   return fetch(url, options).then(response => response.json());
 };
 
-
-
-window.addEventListener('load', async (e) => {
-  let todayHijri = await fetchHijriJSON();
-  console.log('hijri', todayHijri)
+function setHijri(hijri) {
+  const todayHijri= hijri
   let hDay = todayHijri.day
   let hMonth = todayHijri.month.en
   let hYear = todayHijri.year
-
   document.querySelector('header .islamic-date span').innerHTML = `${hDay} ${hMonth} ${hYear}`
+}
+
+function setPrayerTime(timings) {
+  let todaysPrayers = timings.data[todaysDate.cDay - 1]
+  console.log('prayer time', todaysPrayers)
+  
+  
+  for(prayer in todaysPrayers.timings) {
+    let prayerTimes = document.querySelector(`.prayer-times .${prayer.toLowerCase()}`);
+    if(prayerTimes) {
+      console.log(`prayer`, todaysPrayers.timings[prayer]);
+      prayerTimes.querySelector('.time').innerHTML=todaysPrayers.timings[prayer]
+    }
+  }
+  
+}
+
+window.addEventListener('load', async (e) => {
+
+  let todayHijri;
+  request('http://api.aladhan.com/v1/gToH', {
+      date: todaysDate.cDay + "-" + todaysDate.cMonth + "-" + todaysDate.cYear
+    })
+    .then(response => {
+      // Do something with response.
+     setHijri(response.data.hijri);
+    });
 
   let prayerTime = request('https://api.aladhan.com/v1/calendarByCity', {
       city: 'Toronto',
@@ -53,6 +73,6 @@ window.addEventListener('load', async (e) => {
     })
     .then(response => {
       // Do something with response.
-      console.log('prayer time', response)
+      setPrayerTime(response)
     });
 })
