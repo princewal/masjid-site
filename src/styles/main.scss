@@ -186,3 +186,30 @@ section {
     }
   }
 }
+
+.news-events-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  .news-events {
+    flex: 0 1 100%;
+    padding: 1em;
+    .date-time {
+      display: flex;
+      flex-flow: row wrap;
+      box-shadow: 0 0 2px #000;
+      > div {
+        padding-block: 2px;
+        flex: 0 1 100%;
+      }
+    }
+  }
+  @media screen and (min-width: 990px) {
+    flex-flow: row wrap;
+    align-content: flex-start;
+    .news-events {
+      flex: 0 1 50%;
+    }
+  }
+}
