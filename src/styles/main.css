@@ -142,7 +142,9 @@ header .islamic-date {
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Caudex", serif;
   font-weight: 700;
   color: #247881;
@@ -254,15 +256,37 @@ section h2 {
 .news-events-container .news-events {
   flex: 0 1 100%;
   padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
 }
 .news-events-container .news-events .date-time {
-  display: flex;
+  flex: 0 1 auto;
+  display: inline-flex;
   flex-flow: row wrap;
-  box-shadow: 0 0 2px #000;
+  border-right: solid 2px #222222;
 }
 .news-events-container .news-events .date-time > div {
   padding-block: 2px;
   flex: 0 1 100%;
+}
+.news-events-container .news-events .date-time .day {
+  font-size: 1.5em;
+  color: #247881;
+}
+.news-events-container .news-events .news-events-header {
+  flex: 0 1 70%;
+  text-align: center;
+}
+.news-events-container .news-events .news-events-header h3 {
+  font-size: 1.3em;
+}
+.news-events-container .news-events .news-events-content {
+  flex: 0 1 100%;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
 }
 @media screen and (min-width: 990px) {
   .news-events-container {

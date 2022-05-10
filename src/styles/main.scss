@@ -18,8 +18,8 @@ main {
   text-align: center;
   width: 300px;
   height: 100px;
-  border: 10px solid hsla(0,0%,100%,.75);
-  background: rgba(255,255,255, 0.35);
+  border: 10px solid hsla(0, 0%, 100%, .75);
+  background: rgba(255, 255, 255, 0.35);
   background-clip: padding-box;
   display: flex;
   flex-direction: column;
@@ -31,8 +31,9 @@ header {
   width: 100%;
   height: 90vh;
   background: url(../images/Domes-mosque-Malaysia.webp) no-repeat center / cover;
+
   .welcome-note {
-    background: rgba(255,255,255, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     max-width: 70%;
     width: 100%;
     height: 65%;
@@ -40,7 +41,7 @@ header {
     position: relative;
     font-size: 2rem;
     padding: 10px;
-    box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.5);
     position: relative;
     left: 0;
     top: 20%;
@@ -48,29 +49,34 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     h1 {
       padding: 10px;
       color: #247881;
     }
+
     p {
       padding: 2px;
       font-size: 18px;
       font-weight: 400;
     }
+
     @media screen and (min-width: 1024px) {
       font-size: 2.5rem;
       max-width: 550px;
-      background: rgba(255,255,255, 0.75);
+      background: rgba(255, 255, 255, 0.75);
       padding: 15px;
       position: absolute;
       top: 20%;
       left: 5%;
     }
+
     @media screen and (min-width: 1439px) {
       font-size: 3rem;
       padding: 25px;
     }
   }
+
   .islamic-date {
     position: absolute;
     top: 0%;
@@ -79,27 +85,32 @@ header {
     font-weight: 400;
     color: #faf3f2;
     height: auto;
-    width:auto;
+    width: auto;
     text-align: left;
-    box-shadow: 10px 10px 22px 0 rgba(0,0,0,0.55);
+    box-shadow: 10px 10px 22px 0 rgba(0, 0, 0, 0.55);
     padding: 10px;
     display: flex;
     align-items: center;
     margin: auto;
+
     @media screen and (min-width:1024px) {
       font-size: 16px;
     }
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Caudex', serif;
   font-weight: 700;
   color: #247881;
 }
+
 h1 {
   font-size: 3.5rem;
-  @media screen  and (max-width: 768px ) {
+
+  @media screen and (max-width: 768px) {
     font-size: 2rem;
   }
 }
@@ -111,18 +122,23 @@ p {
 section {
   padding: 15px;
   text-align: center;
+
   h2 {
     font-size: 22px;
     font-weight: 700;
   }
+
   @media screen and (min-width: 1024px) {
     padding: 25px;
+
     h2 {
       font-size: 28px;
     }
   }
-  @media screen and  (min-width: 1280px) {    
+
+  @media screen and (min-width: 1280px) {
     padding: 50px;
+
     h2 {
       font-size: 32px;
     }
@@ -138,6 +154,7 @@ section {
   height: auto;
   padding: 20px;
   margin: 0 auto;
+
   .prayer {
     color: white;
     flex: 0 1 100%;
@@ -147,9 +164,11 @@ section {
     justify-content: center;
     height: 100%;
     padding: 10px 0;
-     > * {
+
+    >* {
       flex: 0 1 100%;
     }
+
     h3 {
       padding: 10px 0;
       color: #247881;
@@ -157,28 +176,36 @@ section {
       font-weight: 700;
       font-size: 20px;
     }
+
     &.fajr {
       background: #8b673d;
     }
+
     &.dhuhr {
       background: #a68a39;
     }
+
     &.asr {
       background: #536880;
     }
+
     &.maghrib {
       background: #82352e;
     }
+
     &.isha {
       background: #251a1d
     }
+
     .time {
       padding: 0 0 10px 0;
     }
   }
+
   @media screen and (min-width: 990px) {
     height: 500px;
     width: 660px;
+
     .prayer {
       flex: 0 1 20%;
       flex-flow: wrap;
@@ -192,22 +219,54 @@ section {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+
   .news-events {
     flex: 0 1 100%;
     padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+
     .date-time {
-      display: flex;
+      flex: 0 1 auto;
+      display: inline-flex;
       flex-flow: row wrap;
-      box-shadow: 0 0 2px #000;
-      > div {
+      border-right: solid 2px #222222;
+
+      >div {
         padding-block: 2px;
         flex: 0 1 100%;
       }
+
+      .day {
+        font-size: 1.5em;
+        color: #247881;
+
+      }
+    }
+
+    .news-events-header {
+      flex: 0 1 70%;
+      text-align: center;
+
+      h3 {
+        font-size: 1.3em;
+      }
+    }
+
+    .news-events-content {
+      flex: 0 1 100%;
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.25;
+      letter-spacing: 0.05em;
     }
   }
+
   @media screen and (min-width: 990px) {
     flex-flow: row wrap;
     align-content: flex-start;
+
     .news-events {
       flex: 0 1 50%;
     }
