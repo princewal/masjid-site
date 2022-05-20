@@ -13,7 +13,7 @@
 
 <body>
   <div class="feature">
-    <div class="welcome-note" data-aos="fade-up">
+    <div class="welcome-note" data-aos="fade-in" data-aos-duration="1000">
       <h1>Al-Ibrahimi Masjid</h1>
       <p>this is our test masjid site</p>
     </div>
@@ -24,25 +24,25 @@
   <main>
     <article>
       <section>
-        <h2>Prayers Times</h2>
+        <h2 data-aos="fade-up">Prayers Times</h2>
         <div class="prayer-times">
-          <div class="prayer fajr">
+          <div class="prayer fajr" data-aos="fade-up" data-aos-delay="0">
             <h3>FAJR</h3>
             <div class="time"></div>
           </div>
-          <div class="prayer dhuhr">
+          <div class="prayer dhuhr" data-aos="fade-up" data-aos-delay="100">
             <h3>ZUHUR</h3>
             <div class="time"></div>
           </div>
-          <div class="prayer asr">
+          <div class="prayer asr" data-aos="fade-up" data-aos-delay="200">
             <h3>ASR</h3>
             <div class="time"></div>
           </div>
-          <div class="prayer maghrib">
+          <div class="prayer maghrib" data-aos="fade-up" data-aos-delay="300">
             <h3>MAGHRIB</h3>
             <div class="time"></div>
           </div>
-          <div class="prayer isha">
+          <div class="prayer isha" data-aos="fade-up" data-aos-delay="400">
             <h3>ISHA</h3>
             <div class="time"></div>
           </div>
@@ -83,6 +83,14 @@
     <article>
       <section>
         <h2>Contact Us</h2>
+        <div class="contact-form">
+          <form id="contact-us">      
+            <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+            <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+            <input type="submit" value="SUBMIT"/>
+          </form>
+        </div>
       </section>
     </article>
   </main>

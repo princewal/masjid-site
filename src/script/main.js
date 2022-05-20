@@ -35,7 +35,7 @@ function setHijri(hijri) {
   let hDay = todayHijri.day
   let hMonth = todayHijri.month.en
   let hYear = todayHijri.year
-  document.querySelector('header .islamic-date span').innerHTML = `${hDay} ${hMonth} ${hYear}`
+  document.querySelector('.feature .islamic-date span').innerHTML = `${hDay} ${hMonth} ${hYear}`
 }
 
 function setPrayerTime(timings) {
