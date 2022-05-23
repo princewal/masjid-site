@@ -54,6 +54,17 @@ module.exports = function (grunt) {
             dest: "public/styles/main.css",
             filter: "isFile",
           },
+          {
+            src: ["src/script/main.js"],
+            dest: "public/script/main.js",
+            filter: "isFile",
+          },
+          {
+            cwd: 'src/images/',
+            src: ["**/*.{png,jpg,svg,webp}"],
+            dest: "public/images/",
+            expand: true,
+          },
           // {
           //   expand: true,
           //   cwd: "src/images/",
