@@ -1,15 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Open+Sans:wght@300;400&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
 body {
-  background: url("images/bg-paper-1.jpg");
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  background: #faf3f2;
   color: #222222;
   font-size: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
 }
 
-h1, h2 {
+main {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  border: 10px solid hsla(0deg, 0%, 100%, 0.75);
+  background: rgba(255, 255, 255, 0.35);
+  background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.feature {
+  width: 100%;
+  height: 90vh;
+  background: url(../images/Domes-mosque-Malaysia.webp) no-repeat center/cover;
+}
+.feature .welcome-note {
+  background: rgba(255, 255, 255, 0.75);
+  background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb);
+  max-width: 70%;
+  width: 100%;
+  height: 35%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 0;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.feature .welcome-note h1 {
+  padding: 10px;
+  color: #247881;
+}
+.feature .welcome-note p {
+  padding: 2px;
+  font-size: 18px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  .feature .welcome-note {
+    font-size: 2.5rem;
+    max-width: 550px;
+    padding: 15px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+}
+@media screen and (min-width: 1439px) {
+  .feature .welcome-note {
+    font-size: 3rem;
+    padding: 25px;
+  }
+}
+.feature .islamic-date {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  font-size: 14px;
+  font-weight: 400;
+  color: #faf3f2;
+  height: auto;
+  width: auto;
+  text-align: left;
+  box-shadow: 10px 10px 22px 0 rgba(0, 0, 0, 0.55);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  .feature .islamic-date {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3 {
   font-family: "Caudex", serif;
   font-weight: 700;
+  color: #247881;
 }
 
 h1 {
@@ -23,6 +162,191 @@ h1 {
 
 p {
   font-weight: 300;
+}
+
+section {
+  padding: 15px;
+  text-align: center;
+}
+section h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  section {
+    padding: 25px;
+  }
+  section h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  section {
+    padding: 50px;
+  }
+  section h2 {
+    font-size: 32px;
+  }
+}
+
+.prayer-times {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+}
+.prayer-times .prayer {
+  color: white;
+  flex: 0 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px 0;
+}
+.prayer-times .prayer > * {
+  flex: 0 1 100%;
+}
+.prayer-times .prayer h3 {
+  padding: 10px 0;
+  color: #247881;
+  font-weight: 700;
+  font-size: 20px;
+}
+.prayer-times .prayer.fajr {
+  background: #FF5F6D;
+  background: linear-gradient(to top, #FFC371, #FF5F6D);
+}
+.prayer-times .prayer.dhuhr {
+  background: #F2994A;
+  background: linear-gradient(to top, #F2C94C, #F2994A);
+}
+.prayer-times .prayer.asr {
+  background: #22c1c3;
+  background: linear-gradient(to top, #fdbb2d, #22c1c3);
+}
+.prayer-times .prayer.maghrib {
+  background: #ff7e5f;
+  background: linear-gradient(to top, #feb47b, #ff7e5f);
+}
+.prayer-times .prayer.isha {
+  background: #4B79A1;
+  background: linear-gradient(to top, #283E51, #4B79A1);
+}
+.prayer-times .prayer .time {
+  padding: 0 0 10px 0;
+}
+@media screen and (min-width: 990px) {
+  .prayer-times {
+    height: 500px;
+    width: 660px;
+  }
+  .prayer-times .prayer {
+    flex: 0 1 20%;
+    flex-flow: wrap;
+    align-content: center;
+  }
+}
+
+.news-events-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.news-events-container .news-events {
+  flex: 0 1 100%;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.news-events-container .news-events .date-time {
+  flex: 0 1 auto;
+  display: inline-flex;
+  flex-flow: row wrap;
+  border-right: solid 2px #222222;
+}
+.news-events-container .news-events .date-time > div {
+  padding-block: 2px;
+  flex: 0 1 100%;
+}
+.news-events-container .news-events .date-time .day {
+  font-size: 1.5em;
+  color: #247881;
+}
+.news-events-container .news-events .news-events-header {
+  flex: 0 1 70%;
+  text-align: center;
+}
+.news-events-container .news-events .news-events-header h3 {
+  font-size: 1.3em;
+}
+.news-events-container .news-events .news-events-content {
+  flex: 0 1 100%;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 990px) {
+  .news-events-container {
+    flex-flow: row wrap;
+    align-content: flex-start;
+  }
+  .news-events-container .news-events {
+    flex: 0 1 50%;
+  }
+}
+
+#contact-us {
+  max-width: 420px;
+  margin: 1em auto;
+}
+#contact-us .feedback-input {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #247881;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+#contact-us .feedback-input:focus {
+  border: 2px solid #CC4949;
+}
+#contact-us textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+#contact-us [type=submit] {
+  width: 100%;
+  background: #247881;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+#contact-us [type=submit]:hover {
+  background: #CC4949;
 }
 
 /*# sourceMappingURL=main.css.map */
