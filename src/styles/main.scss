@@ -11,6 +11,7 @@ body {
 }
 
 main {
+  background: url(../images/white-wall-bg.webp) repeat;
   position: relative;
   margin: 0 auto;
   max-width: 1440px;
@@ -25,79 +26,6 @@ main {
   flex-direction: column;
   width: 100%;
   height: 100%;
-}
-
-.feature {
-  width: 100%;
-  height: 90vh;
-  background: url(../images/Domes-mosque-Malaysia.webp) no-repeat center / cover;
-
-  .welcome-note {
-    background: rgba(255, 255, 255, 0.75);
-    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb);
-    max-width: 70%;
-    width: 100%;
-    height: 35%;
-    margin: 0 auto;
-    position: relative;
-    font-size: 2rem;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.5);
-    position: relative;
-    left: 0;
-    top: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-      padding: 10px;
-      color: #247881;
-    }
-
-    p {
-      padding: 2px;
-      font-size: 18px;
-      font-weight: 400;
-    }
-
-    @media screen and (min-width: 1024px) {
-      font-size: 2.5rem;
-      max-width: 550px;
-      padding: 15px;
-      position: absolute;
-      top: 20%;
-      left: 5%;
-    }
-
-    @media screen and (min-width: 1439px) {
-      font-size: 3rem;
-      padding: 25px;
-    }
-  }
-
-  .islamic-date {
-    position: absolute;
-    top: 0%;
-    right: 5%;
-    font-size: 14px;
-    font-weight: 400;
-    color: #faf3f2;
-    height: auto;
-    width: auto;
-    text-align: left;
-    box-shadow: 10px 10px 22px 0 rgba(0, 0, 0, 0.55);
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    margin: auto;
-
-    @media screen and (min-width:1024px) {
-      font-size: 16px;
-    }
-  }
 }
 
 h1,
@@ -145,6 +73,81 @@ section {
     }
   }
 }
+
+.feature {
+  width: 100%;
+  height: 90vh;
+  background: url(../images/Domes-mosque-Malaysia.webp) no-repeat center / cover;
+
+  .welcome-note {
+    background: rgba(255, 255, 255, 0.75);
+    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb);
+    max-width: 70%;
+    width: 100%;
+    height: 35%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 0;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      padding: 10px;
+      color: #247881;
+      text-shadow: 2px 2px 3px rgb(36 120 129 / 50%);
+    }
+
+    p {
+      padding: 2px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2.5rem;
+      max-width: 550px;
+      padding: 15px;
+      position: absolute;
+      top: 20%;
+      left: 5%;
+    }
+
+    @media screen and (min-width: 1439px) {
+      font-size: 3rem;
+      padding: 25px;
+    }
+  }
+
+  .islamic-date {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #faf3f2;
+    height: auto;
+    width: auto;
+    text-align: left;
+    box-shadow: 10px 10px 22px 0 rgba(0, 0, 0, 0.55);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+
+    @media screen and (min-width:1024px) {
+      font-size: 16px;
+    }
+  }
+}
+
 
 .prayer-times {
   display: flex;
@@ -238,10 +241,12 @@ section {
     flex-wrap: wrap;
 
     .date-time {
-      flex: 0 1 auto;
+      flex: 0 1;
       display: inline-flex;
       flex-flow: row wrap;
       border-right: solid 2px #222222;
+      padding-inline: 10px;
+      text-align: left;
 
       >div {
         padding-block: 2px;
@@ -256,8 +261,9 @@ section {
     }
 
     .news-events-header {
-      flex: 0 1 70%;
-      text-align: center;
+      flex: 0 1 75%;
+      text-align: left;
+      padding-left: 10px;
 
       h3 {
         font-size: 1.3em;
